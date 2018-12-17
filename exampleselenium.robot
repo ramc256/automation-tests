@@ -19,8 +19,7 @@ GOO1 Busqueda de la palabras en google
     Page Should Contain     ${palabraABuscar}
 
 GOO2 Hacer click en el boton de sin escrbir ninguna palabras en google
-    Open Browser    ${URL}     ${Navegador}
-    Wait Until Element Is Visible   xpath=//*[@id="hplogo"]
+    Abrir Navegador y Esperar Logo
     Click Element       xpath=/html/body/div/div[3]/form/div[2]/div/div[3]/center/input[1]
     Title Should Be     Google
     Close Browser
