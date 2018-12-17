@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1 (Python 3.7.1 on win32)" generated="20181217 14:54:03.828" rpa="false">
+<suite id="s1" name="Exampleselenium" source="C:\Users\CoalaGroup\Desktop\automation-tests\exampleselenium.robot">
+<test id="s1-t1" name="GOO1 Busqueda de la palabras en google">
+<kw name="Abrir Navegador y Esperar Logo">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Navegador}</arg>
+</arguments>
+<msg timestamp="20181217 14:54:04.136" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181217 14:54:25.539" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" starttime="20181217 14:54:19.470" endtime="20181217 14:54:25.540"></status>
+</kw>
+<msg timestamp="20181217 14:54:25.540" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<msg timestamp="20181217 14:54:25.542" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" starttime="20181217 14:54:04.135" endtime="20181217 14:54:25.542"></status>
+</kw>
+<status status="FAIL" starttime="20181217 14:54:04.135" endtime="20181217 14:54:25.543"></status>
+</kw>
+<status status="FAIL" starttime="20181217 14:54:04.133" endtime="20181217 14:54:25.543" critical="yes">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<test id="s1-t2" name="GOO2 Hacer click en el boton de sin escrbir ninguna palabras en google">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Navegador}</arg>
+</arguments>
+<msg timestamp="20181217 14:54:25.549" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20181217 14:54:25.548" endtime="20181217 14:54:34.252"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="hplogo"]</arg>
+</arguments>
+<status status="PASS" starttime="20181217 14:54:34.253" endtime="20181217 14:54:34.321"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[3]/form/div[2]/div/div[3]/center/input[1]</arg>
+</arguments>
+<msg timestamp="20181217 14:54:34.322" level="INFO">Clicking element 'xpath=/html/body/div/div[3]/form/div[2]/div/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20181217 14:54:34.322" endtime="20181217 14:54:34.460"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Google</arg>
+</arguments>
+<msg timestamp="20181217 14:54:34.473" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20181217 14:54:34.462" endtime="20181217 14:54:34.474"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20181217 14:54:34.474" endtime="20181217 14:54:36.753"></status>
+</kw>
+<status status="PASS" starttime="20181217 14:54:25.546" endtime="20181217 14:54:36.755" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20181217 14:54:03.830" endtime="20181217 14:54:36.760"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Exampleselenium">Exampleselenium</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20181217 14:54:25.540" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+</errors>
+</robot>
